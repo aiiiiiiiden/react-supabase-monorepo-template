@@ -1,0 +1,29 @@
+{
+  "name": "react-supabase-monorepo",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "pnpm --filter @repo/web dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "type-check": "pnpm -r type-check",
+    "clean": "pnpm -r exec rm -rf dist node_modules && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "db:start": "pnpm --filter @repo/supabase start",
+    "db:stop": "pnpm --filter @repo/supabase stop",
+    "db:status": "pnpm --filter @repo/supabase status",
+    "db:reset": "pnpm --filter @repo/supabase reset",
+    "db:generate-types": "pnpm --filter @repo/supabase generate-types",
+    "functions:serve": "pnpm --filter @repo/supabase functions:serve",
+    "functions:deploy": "pnpm --filter @repo/supabase functions:deploy"
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "workspace:*",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

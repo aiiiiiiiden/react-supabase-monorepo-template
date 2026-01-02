@@ -1,0 +1,22 @@
+{
+  "name": "@repo/supabase",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "supabase start",
+    "stop": "supabase stop",
+    "status": "supabase status",
+    "reset": "supabase db reset",
+    "generate-types": "supabase gen types typescript --local > ../packages/shared/src/types/database.ts",
+    "migration:new": "supabase migration new",
+    "migration:up": "supabase migration up --local",
+    "migration:list": "supabase migration list --local",
+    "functions:serve": "supabase functions serve",
+    "functions:deploy": "supabase functions deploy",
+    "link": "supabase link",
+    "push": "supabase db push"
+  },
+  "devDependencies": {
+    "supabase": "^2.70.5"
+  }
+}
